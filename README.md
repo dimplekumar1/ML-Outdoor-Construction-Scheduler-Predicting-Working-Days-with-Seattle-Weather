@@ -1,4 +1,4 @@
-# ML Outdoor Construction Scheduler: Predicting Working Days with Seattle Weather
+# Machine Learning Outdoor Construction Scheduler: Predicting Working Days with Seattle Weather
 
 This repository contains a machine learning project aimed at predicting working days suitable for outdoor construction activities based on historical weather data from Seattle (2012-2015). The project utilizes Random Forest algorithms to forecast weather conditions and classify days into working and non-working categories.
 
