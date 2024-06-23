@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.header {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.label {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container, .calendar-container, .test-results-container, .dashboard-container {
+  width: 100%;
+  max-width: 1500px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input[type="date"], button {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.result-container {
+  margin-top: 20px;
+  font-size: 1.125rem;
+  color: #333;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.month {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+}
+
+.month-name {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  padding: 8px;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.legend-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding and margin are included in the element's width and height */
+  overflow: auto;
+}
+
+.legend-title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.legend-color-working-day, .legend-color-rain-day, .legend-color-snow-day, .legend-color-cold-day, .legend-color-today {
+  margin: 15px 10px;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.legend-color-working-day { background-color: #27AE60; }
+.legend-color-rain-day { background-color: #3498DB; }
+.legend-color-snow-day { background-color: #8E44AD; }
+.legend-color-cold-day { background-color: #412DE1; }
+.legend-color-today {
+  color: #E8811A;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.legend-text {
+  font-size: 1rem;
+}
+
+.working-day { background-color: #27AE60; color: white; font-weight: bold; }
+.snow-style { background-color: #8E44AD; color: white; font-weight: bold; }
+.rain-style { background-color: #3498DB; color: white; font-weight: bold; }
+.cold-day { background-color: #412DE1; color: white; font-weight: bold; }
+.default-style { background-color: white; color: black; }
+.today { color: #E8811A; font-weight: bold; }
+
+.error-container {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+.chart-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .container, .calendar-container, .test-results-container, .dashboard-container {
+    padding: 15px;
+  }
+
+  .label {
+    font-size: 1.5rem;
+  }
+
+  input[type="date"], button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .month {
+    width: 100%;
+  }
+
+  .legend-item {
+    flex-direction: column;
+  }
+
+  .legend-title {
+    font-size: 1rem;
+  }
+}
+
+
+#temperatureChart {
+    max-width: 100%;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+}
+
+
+#dayTypeChart {
+    max-width: 100%;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+}
+
+#weatherDistributionChart {
+    max-width: 100%;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+}
