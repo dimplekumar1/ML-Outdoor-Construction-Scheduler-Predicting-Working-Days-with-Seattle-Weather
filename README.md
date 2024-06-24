@@ -24,7 +24,7 @@ The ML Outdoor Construction Scheduler project integrates machine learning techni
 
 ## Demo
 
-[Link to Live Demo](#) test
+[Link to Live Demo](https://dimplekumar.pythonanywhere.com/)  
 - Enter a start date and end date to predict working days for construction based on weather forecasts.
 
 ### Evaluation:
