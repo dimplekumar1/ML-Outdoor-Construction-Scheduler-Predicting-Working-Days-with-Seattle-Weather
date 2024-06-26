@@ -34,7 +34,5 @@ The project evaluates model performance using the following metrics:
 - **Mean Absolute Error (MAE)**: Calculates the average difference between predicted and actual temperatures.
 - **Classification Reports**: Provides precision, recall, and F1-score for weather and day type classifications.
 
-  Enter a start date and end date to predict working days for construction based on weather forecasts.
-
 ### License:
 This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit) file for details.
