@@ -8,7 +8,6 @@ This repository contains a machine learning project aimed at predicting working 
 - [Features](#features)
 - [Demo](#demo)
 - [Evaluation](#evaluation)
-- [License](#license)
 
 ## Overview
 
@@ -33,6 +32,3 @@ The project evaluates model performance using the following metrics:
 - **Accuracy**: Measures the percentage of correct predictions for weather conditions and day types.
 - **Mean Absolute Error (MAE)**: Calculates the average difference between predicted and actual temperatures.
 - **Classification Reports**: Provides precision, recall, and F1-score for weather and day type classifications.
-
-### License:
-This project is licensed under the MIT License - see the [LICENSE](https://opensource.org/license/mit) file for details.
